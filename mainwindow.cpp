@@ -42,7 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->tree_view->horizontalHeader()->setSectionResizeMode(0, QHeaderView::Stretch);
 
 
-    connect(ui->tree_view, SIGNAL(clicked(QModelIndex)), this, SLOT(on_clicked_name(QModelIndex)));
+    connect(ui->tree_view, SIGNAL(clicked(QModelIndex)), this, SLOT(click_name(QModelIndex)));
 
 
     vector <string> AllIngredients = storage.MadeAllIngredients();
@@ -123,9 +123,23 @@ void MainWindow::on_push_sort_clicked()
     }
 
     QString combobox_calorie = ui->box_calorie->currentText();
-
-    filtered_data.calories = make_pair (0, 1000);
-
+    switch (ui->box_calorie->currentIndex()) {
+    case 0:
+        filtered_data.calories = make_pair (0, 1000);
+        break;
+    case 1:
+        filtered_data.calories = make_pair (0, 100);
+        break;
+    case 2:
+        filtered_data.calories = make_pair (100, 300);
+        break;
+    case 3:
+        filtered_data.calories = make_pair (300, 500);
+        break;
+    case 4:
+        filtered_data.calories = make_pair (500, 1000);
+        break;
+}
 
     QString combobox_ingred_1 = ui->box_ingredient_1->currentText();
     QString combobox_ingred_2 = ui->box_ingredient_2->currentText();
@@ -145,10 +159,10 @@ void MainWindow::on_push_sort_clicked()
         filtered_data.ingredients.push_back(combobox_ingred_4.toStdString());
 
 
-    QMessageBox::information(this, "Title", "Вы ввели type: " + combobox_type + ",\n price: " + combobox_price+ ",\n time:"
+    /*QMessageBox::information(this, "Title", "Вы entered type: " + combobox_type + ",\n price: " + combobox_price+ ",\n time:"
                              + combobox_time + ",\n calorie:" + combobox_calorie + ",\n ingredient_1:"+ combobox_ingred_1
                              + ",\n ingredient_2:" + combobox_ingred_2 + ",\n ingredient_3:" + combobox_ingred_3
-                             + ",\n ingredient_4:" + combobox_ingred_4);
+                             + ",\n ingredient_4:" + combobox_ingred_4);*/
 
 
 
@@ -224,11 +238,11 @@ void MainWindow::on_push_add_triggered()
     wnd->show();
 }
 
-void MainWindow::on_clicked_name(const QModelIndex &index) {
+void MainWindow::click_name(const QModelIndex &index) {
     QModelIndex idx = model_tree->index(index.row(), 0);
     QString description = model_tree->data(idx, Qt::UserRole).toString();
     backup_name = (idx.model()->data(idx.model()->index(idx.row(),0)).toString()).toStdString();
-     ui->edit_description->setText(description);
+    ui->edit_description->setText(description);
 }
 
 void MainWindow::on_push_save_triggered()
@@ -241,6 +255,9 @@ void MainWindow::on_push_save_triggered()
 
 void MainWindow::parsing(BasicDishProperty *pars)
 {
+
+    cook = "";
+    ingredient = "";
     name = pars->title;
     price = to_string(pars->average_cost_rub);
     time = to_string(pars->PrepearingTime);
@@ -318,4 +335,6 @@ void MainWindow::on_push_sdelete_triggered()
     delete_dish(backup_name,  storage.SecondDish );
     delete_dish(backup_name,  storage.SaladSnackDish );
 
+    QMessageBox::information(this, "Delete", "Successfully deleted");
+    on_push_sort_clicked();
 }

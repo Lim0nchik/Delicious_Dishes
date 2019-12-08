@@ -23,11 +23,6 @@ private:
 
     Storage &storage = Storage::getinstance();
 
-   // BasicDishProperty* Basic;
-
-
-   //BasicDishProperty add_dish;
-
 
 signals:
     void file_dialog(const QString &str);

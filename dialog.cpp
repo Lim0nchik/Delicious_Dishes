@@ -14,12 +14,12 @@ Dialog::Dialog(QWidget *parent, string name_line, string price_line, string time
 
     ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 
-    QRegExp reg_name ("[a-zA-Z ]{0,40}");
+    QRegExp reg_name ("[a-zA-Z ]{1,40}");
     QRegExp reg_price ("[1-9]{1}[0-9]{0,5}");
     QRegExp reg_calorie ("[1-9]{1}[0-9]{0,7}");
     QRegExp reg_time ("[1-9]{1}[0-9]{0,3}");
 
-    QRegExp reg_ingredient ("[a-zA-Z ]{0,20}:[1-9]{1}[0-9]{0,4}");
+   // QRegExp reg_ingredient ("[a-zA-Z ]{1,20}:[1-9]{1}[0-9]{0,4}");
 
 
     ui->name_edit->setValidator(new QRegExpValidator(reg_name, this));
@@ -34,20 +34,21 @@ Dialog::Dialog(QWidget *parent, string name_line, string price_line, string time
     connect(ui->name_edit,SIGNAL(textChanged(QString)), this, SLOT(okEnabled()));
     connect(ui->price_edit,SIGNAL(textChanged(QString)), this, SLOT(okEnabled()));
     connect(ui->calorie_edit,SIGNAL(textChanged(QString)), this, SLOT(okEnabled()));
-    connect(ui->time_edit, SIGNAL(textChange(Qstring)), this, SLOT(okEnabled()));
+    connect(ui->time_edit, SIGNAL(textChanged(QString)), this, SLOT(okEnabled()));
 
     ui->name_edit->setText(name_line.c_str());
     ui->price_edit->setText(price_line.c_str());
     ui->time_edit->setText(time_line.c_str());
     ui->calorie_edit->setText(calorie_line.c_str());
-    ui->text_cook->setText(cook_text.c_str());
     ui->text_ingredient->setText(ingredient_text.c_str());
+    ui->text_cook->setText(cook_text.c_str());
 
 
-    int index = ui->dialog_box->findText(type.c_str());
-    ui->dialog_box->setCurrentIndex(index);
-    ui->dialog_box->setEnabled(enable);
-
+    if (!enable){
+        int index = ui->dialog_box->findText(type.c_str());
+        ui->dialog_box->setCurrentIndex(index);
+        ui->dialog_box->setEnabled(enable);
+}
 
 
 }
@@ -64,7 +65,7 @@ void Dialog::okEnabled()
 void Dialog::okClicked()
 {
 
-    emit file_dialog(ui->name_edit->text());
+   // emit file_dialog(ui->name_edit->text());
 
     vector <string> total;
 
@@ -115,29 +116,38 @@ void Dialog::okClicked()
             warning += it->c_str();
             warning += '\n';
         }
-         QMessageBox::warning(this, "warning", "У вас ошибки в строчках:\n" + warning);
+         QMessageBox::warning(this, "warning", "Errors were found in the lines:\n" + warning);
      }
     else {
 
-        Storage::New_Dish NewDish;
+        Storage::NewDish NewDish;
 
         NewDish.dish_type = static_cast <Storage::DishType> (ui->dialog_box->currentIndex() + 1);
         NewDish.title = dialog_name.toStdString();
-        NewDish.PrepearingTime = dialog_time.toInt();
+        NewDish.preparing_time = dialog_time.toInt();
         NewDish.average_cost_rub = dialog_price.toInt();
         NewDish.calorie_content_100gr = dialog_calorie.toInt();
         NewDish.ingredients = vector_ingredient;
         NewDish.ingredients_count = vector_ingredient_count;
         NewDish.HowToCook = vector_how_to_cook;
 
-        //дальше *накосячил надо наверное написать функцию чтобы не загромождать проверками*
 
         bool success, success_1, success_2, success_3;
         BasicDishProperty *it, *it_1, *it_2, *it_3;
+
+
+
         tie(success, it) = storage.search_dish(dialog_name.toStdString(), storage.DessertDish);
         tie(success_1, it_1) = storage.search_dish(dialog_name.toStdString(), storage.FirstDish);
         tie(success_2, it_2) = storage.search_dish(dialog_name.toStdString(), storage.SecondDish);
         tie(success_3, it_3) = storage.search_dish(dialog_name.toStdString(), storage.SaladSnackDish);
+
+        if (success)
+        {
+            *it = NewDish;}
+        else if (success_1) {
+
+        }
         if (success || success_1 || success_2 || success_3)
         {
 
@@ -146,15 +156,15 @@ void Dialog::okClicked()
                 *it = NewDish;}
             if (success_1)
             {
-                *it = NewDish;}
+                *it_1 = NewDish;}
             if (success_2)
             {
-                *it = NewDish;}
+                *it_2 = NewDish;}
             if (success_3)
             {
-                *it = NewDish;}
+                *it_3 = NewDish;}
 
-            QMessageBox::information(this, "Change", "Изменение прошло успешно");
+            QMessageBox::information(this, "Change", "Change was successful");
             close();
 
         }
@@ -163,7 +173,7 @@ void Dialog::okClicked()
 
         storage.Add_NewDish(NewDish);
 
-     QMessageBox::information(this, "Add", "Блюдо было добавлена");
+     QMessageBox::information(this, "Add", "Dish added");
 
      close();
         }

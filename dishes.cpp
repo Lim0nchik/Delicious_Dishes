@@ -1,8 +1,6 @@
 #include "dishes.h"
 
 
-
-
     BasicDishProperty::BasicDishProperty ( const Json::Value &Dish)
     {
         title = Dish["info"]["title"].asString();
@@ -23,10 +21,10 @@
 
     }
 
-    BasicDishProperty::BasicDishProperty (Storage::New_Dish new_dish)
+    BasicDishProperty::BasicDishProperty (Storage::NewDish new_dish)
     {
         title = new_dish.title;
-        PrepearingTime = new_dish.PrepearingTime;
+        PrepearingTime = new_dish.preparing_time;
         average_cost_rub = new_dish.average_cost_rub;
         calorie_content_100gr = new_dish.calorie_content_100gr;
         ingredients = new_dish.ingredients;
@@ -67,28 +65,27 @@
 
     Json::Value DessertDishProperty::toJson() const {
         auto val = BasicDishProperty::toJson();
-        val["info"]["type"] = "Dessert";
+        val["info"]["type"] = "DessertDish";
         return val;
     }
 
     Json::Value FirstDishProperty::toJson() const {
         auto val = BasicDishProperty::toJson();
-        val["info"]["type"] = "First";
+        val["info"]["type"] = "FirstDish";
         return val;
     }
 
     Json::Value SecondDishProperty::toJson() const {
         auto val = BasicDishProperty::toJson();
-        val["info"]["type"] = "Second";
+        val["info"]["type"] = "SecondDish";
         return val;
     }
 
     Json::Value SaladSnackDishProperty::toJson() const {
         auto val = BasicDishProperty::toJson();
-        val["info"]["type"] = "SaladSnack";
+        val["info"]["type"] = "SaladSnackDish";
         return val;
-    }
-
+    }   
 
     string Storage::getDisplayType(DishType dishType)
     {
@@ -119,12 +116,12 @@
         return AllIng;
     }
 
-    vector <BasicDishProperty*> Storage::Sorting( FilterParams FilterData)
+    vector <BasicDishProperty*> Storage::Sorting( const FilterParams &FilterData)
     {
         vector <BasicDishProperty*> SuitableData;
         SuitableData = getDishesByType(FilterData.dish_type);
         SuitableData = filterByAvgCost(SuitableData, FilterData.cost.first, FilterData.cost.second);
-        SuitableData = filterByCookingTime(SuitableData, FilterData.time.first, FilterData.cost.second) ;
+        SuitableData = filterByCookingTime(SuitableData, FilterData.time.first, FilterData.time.second) ;
         SuitableData = filterByCalories(SuitableData, FilterData.calories.first, FilterData.calories.second);
         SuitableData = filterByIngredients(SuitableData, FilterData.ingredients);
 
@@ -132,7 +129,7 @@
     }
 
 
-    void Storage::Add_NewDish(New_Dish new_dish)
+    void Storage::Add_NewDish(const NewDish &new_dish)
     {
         switch (new_dish.dish_type) {
 
@@ -164,7 +161,7 @@
 
     Json::Value Storage::JsonOpen ()
     {
-        ifstream Recep("rep.json");
+        ifstream Recep("Recepies.json");
         Json::Reader reader;
         Json::Value Recepies_1;
         reader.parse( Recep, Recepies_1);
@@ -265,7 +262,3 @@
         }
         return i;
     }
-
-
-
-

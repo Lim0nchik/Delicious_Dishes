@@ -1,0 +1,596 @@
+[
+	{
+		"howtocook" : 
+		[
+			"1) Mix all ingredients",
+			"2) Give the necessary shape to the dough",
+			"3) Bake in an oven preheated to 190 degrees for 10-15 minutes until light golden.",
+			"4) Ready to serve"
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 80,
+			"calorie_content_100gr" : 453,
+			"time_min" : 40,
+			"title" : "Shortbread cookies",
+			"type" : "DessertDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Flour",
+				"count" : "280 gr"
+			},
+			{
+				"Name" : "Butter",
+				"count" : "200 gr"
+			},
+			{
+				"Name" : "Powdered sugar",
+				"count" : "160 gr"
+			},
+			{
+				"Name" : "Eggs",
+				"count" : "4 pieces"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1)  Rub frozen butter.",
+			"2)  Add flour eggs youlk and 2 sugar spoons.",
+			"3)  Mix and made dough",
+			"4)  Left in fridge on 40 min.",
+			"5)  Cut 6 apples on cubes.",
+			"6)  Boi apples with some water and sugar 20 min. ",
+			"7)  Put on dough in shape and switch apples.",
+			"8) Bake 30 min by 180 degrees.",
+			"9) Ready to serve."
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 140,
+			"calorie_content_100gr" : 250,
+			"time_min" : 70,
+			"title" : "Apple tart",
+			"type" : "DessertDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Flour",
+				"count" : "300 gr"
+			},
+			{
+				"Name" : "Butter",
+				"count" : "250 gr"
+			},
+			{
+				"Name" : "Sugar",
+				"count" : "4 spoons"
+			},
+			{
+				"Name" : "Egg yolk",
+				"count" : "2 pieces"
+			},
+			{
+				"Name" : "Apples",
+				"count" : "8 pieces"
+			},
+			{
+				"Name" : "Apricot jam",
+				"count" : "4 spoons"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) Mix gelatin and 140 ml of cold water in cup.",
+			"2) Mix sugar, vanillin and 120 ml of water in pan on low heat.",
+			"3) When syrup became clear, add cup with gelatin. ",
+			"4) When dsyrup dissolve, put into a bowl.",
+			"5) Use mikser during 20 minutes.",
+			"6) Left in suitable shape on 2 hours by room temperature.",
+			"7) Cut on little cubes and cover with coconut flakes.",
+			"8) Ready to serve. ",
+			"",
+			""
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 75,
+			"calorie_content_100gr" : 414,
+			"time_min" : 175,
+			"title" : "Marshmallows",
+			"type" : "DessertDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Sugar",
+				"count" : "1.5 spoon"
+			},
+			{
+				"Name" : "Gelatin",
+				"count" : "3 spoons"
+			},
+			{
+				"Name" : "Coconut flakes",
+				"count" : "40 gr"
+			},
+			{
+				"Name" : "Vanillin",
+				"count" : "2 gr"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) Cut carrots into strips, onion - finely.",
+			"2) Spasser onion and carrots in vegetable oil directly in the pan in which you will cook the soup. Cook for 2 minutes.",
+			"3) Add rice. Cook a minute until the rice becomes clear",
+			"4) Add 1.5 liters of water and cook for 10 minutes.",
+			"5) Prepeare meat. Add salt and papper.",
+			"6) Shape the meatballs.",
+			"7) Peel potatoes, cut into cubes.",
+			"8) Put potatoes and meatballs in the broth and cook another 10-12 minutes. ",
+			"9) Ready to serve."
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 90,
+			"calorie_content_100gr" : 64,
+			"time_min" : 60,
+			"title" : "Rice soup",
+			"type" : "FirstDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Stuffing",
+				"count" : "200 gr "
+			},
+			{
+				"Name" : "Rice",
+				"count" : "70 gr "
+			},
+			{
+				"Name" : "Potato",
+				"count" : "200 gr"
+			},
+			{
+				"Name" : "Carrot",
+				"count" : "50 gr "
+			},
+			{
+				"Name" : "Onion",
+				"count" : "50 gr "
+			},
+			{
+				"Name" : "Oil",
+				"count" : "10 gr"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) Put chicken carcass and bone from the legs into the pan, pour cold water to the top.",
+			"2) Put the peeled carrots and parsnip root into the pan and bring to a boil. Remove foam, make minimal fire.",
+			"3) Bind several twigs of parsley, a pair of thyme twigs and 2 bay leaves with a kitchen twine. Put in a pot of broth.",
+			"4) Two cloves of garlic without peeling crush with a knife stalk. Also add to the pan along with 2 peas of allspice and 5 peas of black pepper.",
+			"5) Cook the broth for 1.5 hours on low heat, salt in the end. Remove the chicken from the broth.",
+			"6) Remove the meat from the bones, strain the broth, discard vegetables, herbs and spices.",
+			"7) For noodles, sift flour into a bowl, add 0.5 tbsp. coarsely ground black pepper grains, mix. Make a funnel, beat in two eggs and pour in a spoonful of vegetable oil.",
+			"8) Add a little water and knead a cool dough. Cover the dough with a damp towel and leave for 30 minutes at room temperature.",
+			"9) Divide the dough into 6 parts and roll each as thin as possible on a flour-sprinkled table. Lay the dough plates one on top of the other and cut with a sharp knife into strips 0.5 cm wide. ",
+			"10) Let the noodles dry for a couple of hours. ",
+			"11) Dip the noodles in a slightly boiling broth and cook for 3-4 minutes over low heat.",
+			"12) Ready to serve.",
+			""
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 316,
+			"calorie_content_100gr" : 185,
+			"time_min" : 210,
+			"title" : "Chiken soup",
+			"type" : "FirstDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Chiken",
+				"count" : "1 kg"
+			},
+			{
+				"Name" : "Flour",
+				"count" : "250 gr"
+			},
+			{
+				"Name" : "Egg",
+				"count" : "2 pc"
+			},
+			{
+				"Name" : "Carrot",
+				"count" : "1 pc"
+			},
+			{
+				"Name" : "Parsnip",
+				"count" : "150 gr"
+			},
+			{
+				"Name" : "Parsley",
+				"count" : "5 pcs"
+			},
+			{
+				"Name" : "Thyme",
+				"count" : "2 pcs"
+			},
+			{
+				"Name" : "Bay leaf",
+				"count" : "2 pcs"
+			},
+			{
+				"Name" : "Peppercorns",
+				"count" : "1 tbsp"
+			},
+			{
+				"Name" : "Pepper",
+				"count" : "2 pcs"
+			},
+			{
+				"Name" : "Salt",
+				"count" : "5 gr"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) Mix gelatin and 140 ml of cold water in cup.",
+			"2) Mix sugar, vanillin and 120 ml of water in pan on low heat.",
+			"3) When syrup became clear, add cup with gelatin. ",
+			"4) When dsyrup dissolve, put into a bowl.",
+			"5) Use mikser during 20 minutes.",
+			"6) Left in suitable shape on 2 hours by room temperature.",
+			"7) Cut on little cubes and cover with coconut flakes.",
+			"8) Ready to serve. ",
+			"1) Grind turkey fillet into minced meat",
+			"2) Season with salt and pepper.",
+			"3) Add finely chopped onion.",
+			"4) Mix well. Don’t add an egg - turkey mince is very viscous and cutlets keep their shape well when frying.",
+			"5) Fry cutlets in oil on both sides until cooked.",
+			"6) Ready to searve.",
+			""
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 110,
+			"calorie_content_100gr" : 76,
+			"time_min" : 40,
+			"title" : "Turkey cutlets",
+			"type" : "SecondDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Sugar",
+				"count" : "1.5 spoon"
+			},
+			{
+				"Name" : "Gelatin",
+				"count" : "3 spoons"
+			},
+			{
+				"Name" : "Cocon",
+				"count" : "40 gr"
+			},
+			{
+				"Name" : "Vanillin",
+				"count" : "2 gr"
+			},
+			{
+				"Name" : "Turkey fillet",
+				"count" : "500 g "
+			},
+			{
+				"Name" : "Onion",
+				"count" : "1 pc "
+			},
+			{
+				"Name" : "Salt",
+				"count" : "5 gr "
+			},
+			{
+				"Name" : "Black pepper",
+				"count" : "5 gr"
+			},
+			{
+				"Name" : "Oil",
+				"count" : "3 spoons"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) Peel and cut the mackerel into portions.",
+			"2) Chop onion finely.",
+			"3) Put the onions in the saucepan.",
+			"4) Add finely chopped tomato and vegetable oil.",
+			"5) Fry for 2-3 minutes. Add Tomato Paste.",
+			"6) Cook for 3-4 minutes. Season with pepper, salt.",
+			"7) Add some water.",
+			"8) Put the fish in the sauce, cook over low heat for about 10 minutes.",
+			"9) Ready to serve."
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 70,
+			"calorie_content_100gr" : 160,
+			"time_min" : 40,
+			"title" : "Mackerel in a tomato",
+			"type" : "SecondDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Mackerel",
+				"count" : "350 gr "
+			},
+			{
+				"Name" : "Tomatoes",
+				"count" : "1 pc "
+			},
+			{
+				"Name" : "Onion",
+				"count" : "1 pc "
+			},
+			{
+				"Name" : "Tomato paste",
+				"count" : "1 tbsp"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) You can add any vegetables to your taste. White cabbage can be replaced with cauliflower, broccoli or Brussels sprouts. So we need salt, your favorite seasonings and spices and some vegetable oil.",
+			"2) Vegetables, carrots, potatoes, onions, peel. Remove the stalk and seeds from the pepper.",
+			"3) Cut vegetables into large pieces.",
+			"4) Cut lamb into large pieces. Put the meat in a multicooker pan, add a little vegetable oil. Fry meat in the “Baking” or “Frying” mode for 10 minutes. ",
+			"5) Then add vegetables other than potatoes. Cook in the same mode for another 7-10 minutes.",
+			"6) Add the potatoes. To salt. Season with your favorite seasonings and spices. ",
+			"7) Add some water or stock. Switch the slow cooker to the \"Extinguishing\" mode.",
+			"8) Cook lamb with vegetables for 1 hour. ",
+			"9) Add garlic a few minutes before the end of cooking. ",
+			"10) When serving, sprinkle with herbs. Enjoy your meal!",
+			"",
+			""
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 170,
+			"calorie_content_100gr" : 95,
+			"time_min" : 80,
+			"title" : "Lamb with vegetables",
+			"type" : "SecondDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Lamb",
+				"count" : "500 gr "
+			},
+			{
+				"Name" : "White cabbage",
+				"count" : "400 gr "
+			},
+			{
+				"Name" : "Potato",
+				"count" : "500 gr"
+			},
+			{
+				"Name" : "Carrot",
+				"count" : "1-2 pc "
+			},
+			{
+				"Name" : "Sweet red pepper",
+				"count" : "1 pc"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) Wash tomatoes and cucumbers",
+			"2) Cut tomatoes and cucambers into small pieces",
+			"3) Put in a bowl and mix with smetana",
+			"4) Ready to serve"
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 60,
+			"calorie_content_100gr" : 83,
+			"time_min" : 10,
+			"title" : "Simple vegetable salad",
+			"type" : "SaladSnackDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Cucumber",
+				"count" : "6 pieces"
+			},
+			{
+				"Name" : "Tomato",
+				"count" : "2 pieces"
+			},
+			{
+				"Name" : "Smetana",
+				"count" : "2 tablespoons"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) Mix eggs and milk ",
+			"2) Boil chiken.",
+			"3) Cut cheese, chiken and black olives.",
+			"4) Add all other ingredients.",
+			"5) Divided by baking tins and bake 30-35 min at 200°.",
+			"6) Ready to serve."
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 210,
+			"calorie_content_100gr" : 243,
+			"time_min" : 70,
+			"title" : "Unsweet cookies",
+			"type" : "SaladSnackDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Eggs",
+				"count" : "2 pieces"
+			},
+			{
+				"Name" : "Flour",
+				"count" : "200 gr"
+			},
+			{
+				"Name" : "Cheese",
+				"count" : "100 gr"
+			},
+			{
+				"Name" : "Chiken",
+				"count" : "150 gr"
+			},
+			{
+				"Name" : "Black olives",
+				"count" : "100 gr"
+			},
+			{
+				"Name" : "Milk",
+				"count" : "200 ml"
+			},
+			{
+				"Name" : "Oil",
+				"count" : "2 spoons"
+			},
+			{
+				"Name" : "Sesame",
+				"count" : "1 spoon"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) Peel the bread from the crust, cut into a slice (the shape of the slicing is not important).",
+			"2) Bake in the oven until golden brown.",
+			"3) Grind garlic and salt in a mortar, add mustard and sour cream (sour cream can be replaced with natural yogurt).",
+			"4) Stir everything, add a portion of the grated Parmesan and mix again.",
+			"5) To lettuce or chop coarsely lettuce leaves, add shrimps, previously boiled, croutons (leave some toasts for decoration).",
+			"6) Mix. Put the salad on the serving plates, sprinkle the remaining parmesan on top. Decorate with croutons and herbs. ",
+			"7) Serve immediately."
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 150,
+			"calorie_content_100gr" : 158,
+			"time_min" : 25,
+			"title" : "Ceasar with shrimps",
+			"type" : "SaladSnackDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Cabbage",
+				"count" : "200 gr"
+			},
+			{
+				"Name" : "Shrimps",
+				"count" : "200 gr"
+			},
+			{
+				"Name" : "Bread",
+				"count" : "4 pc"
+			},
+			{
+				"Name" : "Smetana",
+				"count" : "6tbspn"
+			},
+			{
+				"Name" : "Cheese",
+				"count" : "120 gr "
+			},
+			{
+				"Name" : "Mustard",
+				"count" : "2 tspn"
+			},
+			{
+				"Name" : "Garlic",
+				"count" : "1 pc"
+			},
+			{
+				"Name" : "Lemon juice",
+				"count" : "1 pc"
+			},
+			{
+				"Name" : "Salt",
+				"count" : "5 g"
+			}
+		]
+	},
+	{
+		"howtocook" : 
+		[
+			"1) Tomatoes and large balls of mozzarella cut the circles. ",
+			"2) Parch in the scale in the baking shape. Insolic and shake the taste, sprinkle the basilic and sprinkle olive oil. ",
+			"3) Bake 10-15 minutes by 200° until the meat melt.",
+			"4) Ready to serve."
+		],
+		"info" : 
+		{
+			"average_cost_rub" : 108,
+			"calorie_content_100gr" : 130,
+			"time_min" : 35,
+			"title" : "Tomatoes with cheese",
+			"type" : "SaladSnackDish"
+		},
+		"ingredients" : 
+		[
+			{
+				"Name" : "Tomato",
+				"count" : "4pc"
+			},
+			{
+				"Name" : "Mozrel",
+				"count" : "2 pc"
+			},
+			{
+				"Name" : "Oil",
+				"count" : "2 spoons"
+			},
+			{
+				"Name" : "Salt",
+				"count" : "10 gr "
+			},
+			{
+				"Name" : "Pepper black",
+				"count" : "10 gr"
+			},
+			{
+				"Name" : "Basil",
+				"count" : "1 tsp "
+			}
+		]
+	}
+]

@@ -40,7 +40,7 @@ private slots:
     void on_push_add_triggered();
 
     void on_push_save_triggered();
-    void on_clicked_name(const QModelIndex &index);
+    void click_name(const QModelIndex &index);
 
 
 

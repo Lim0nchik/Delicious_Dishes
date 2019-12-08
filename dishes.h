@@ -2,14 +2,12 @@
 #ifndef DISHES_H
 #define DISHES_H
 
+#include "json.h"
+#include <cstdio>
+#include <algorithm>
+#include <fstream>
 #include <iostream>
 #include <string>
-#include <fstream>
-#include <vector>
-#include <algorithm>
-#include "json.h"
-
-#include <stdio.h>
 #include <vector>
 using namespace std;
 
@@ -28,14 +26,8 @@ public:
     static Storage& getinstance()
     {
         static Storage theSingleInstance;
-            return theSingleInstance;
-
+        return theSingleInstance;
     }
-
-    vector <DessertDishProperty> DessertDish;
-    vector <FirstDishProperty> FirstDish;
-    vector <SecondDishProperty> SecondDish;
-    vector <SaladSnackDishProperty> SaladSnackDish;
 
     Json::Value Recepies = JsonOpen();
 
@@ -47,21 +39,18 @@ public:
                   };
 
     struct FilterParams {
-    DishType dish_type;
-
-    pair <int, int> time;
-    pair <int, int> cost;
-    pair <int, int> calories;
-    vector <string> ingredients;
+        DishType dish_type;
+        pair <int, int> time;
+        pair <int, int> cost;
+        pair <int, int> calories;
+        vector <string> ingredients;
     };
 
-    typedef struct New_Dish{
+    struct NewDish{
 
         DishType dish_type;
-
-
         string title;
-        int PrepearingTime;
+        int preparing_time;
         int average_cost_rub;
         int calorie_content_100gr;
 
@@ -70,22 +59,20 @@ public:
 
         vector <string> HowToCook;
 
-    } New_Dish;
+    };
 
     string getDisplayType(DishType dishType);
 
     vector <string> MadeAllIngredients();
 
-    vector <BasicDishProperty*> Sorting( FilterParams FilterData);
+    vector <BasicDishProperty*> Sorting( const FilterParams &FilterData);
 
-    //vector <BasicDishProperty*> Write( FilterParams FilterData);
-
-    void Add_NewDish (New_Dish new_dish);
+    void Add_NewDish (const NewDish &new_dish);
 
     void JsonClose();
 
     template <typename T >
-    tuple <bool, T*> search_dish(const string& name, vector <T> &vec) {
+    pair <bool, T*> search_dish(const string& name, vector <T> &vec) {
        auto it = find_if(vec.begin(), vec.end(), [&name](const T &x) {
                 return x.title == name;
                                             });
@@ -96,7 +83,10 @@ public:
         }
       }
 
-
+    vector <DessertDishProperty> DessertDish;
+    vector <FirstDishProperty> FirstDish;
+    vector <SecondDishProperty> SecondDish;
+    vector <SaladSnackDishProperty> SaladSnackDish;
 
 private:
 
@@ -166,8 +156,6 @@ private:
 
 };
 
-
-
 class BasicDishProperty {
 
 public:
@@ -185,7 +173,7 @@ public:
 
     BasicDishProperty ( const Json::Value &Dish);
 
-    BasicDishProperty ( Storage::New_Dish new_dish);
+    BasicDishProperty ( Storage::NewDish new_dish);
 
     virtual ~BasicDishProperty() {}
 
@@ -200,7 +188,7 @@ public:
 
     DessertDishProperty(const Json::Value &value): BasicDishProperty(value) {}
 
-    DessertDishProperty(Storage::New_Dish new_dish) : BasicDishProperty(new_dish){}
+    DessertDishProperty(Storage::NewDish new_dish) : BasicDishProperty(new_dish){}
 
     virtual Json::Value toJson() const override;
 };
@@ -211,7 +199,7 @@ public:
 
     FirstDishProperty(const Json::Value &value): BasicDishProperty(value) {}
 
-    FirstDishProperty(Storage::New_Dish new_dish) : BasicDishProperty(new_dish){}
+    FirstDishProperty(Storage::NewDish new_dish) : BasicDishProperty(new_dish){}
 
     virtual Json::Value toJson() const override;
 };
@@ -222,7 +210,7 @@ public:
 
     SecondDishProperty(const Json::Value &value): BasicDishProperty(value) {}
 
-    SecondDishProperty(Storage::New_Dish new_dish) : BasicDishProperty(new_dish){}
+    SecondDishProperty(Storage::NewDish new_dish) : BasicDishProperty(new_dish){}
 
     virtual Json::Value toJson() const override;
 };
@@ -233,7 +221,7 @@ public:
 
     SaladSnackDishProperty(const Json::Value &value): BasicDishProperty(value) {}
 
-    SaladSnackDishProperty(Storage::New_Dish new_dish) : BasicDishProperty(new_dish){}
+    SaladSnackDishProperty(Storage::NewDish new_dish) : BasicDishProperty(new_dish){}
 
     virtual Json::Value toJson() const override;
 };
